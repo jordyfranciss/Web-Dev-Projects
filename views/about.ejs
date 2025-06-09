@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | 1000 Spices</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('/images/supermarket1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+       
+
+        .container {
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            background-color: rgba(128, 129, 129, 0.8);
+            border-radius: 12px;
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .heading {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+ body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1; /* <-- fix this */
+}
+
+
+.wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+        @media (max-width: 480px) {
+      .heading {
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+      }
+
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+    </style>
+</head>
+<body>
+    <%- include("partials/header") %>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="heading">🌶️ About 1000 Spices</h1>
+            <h2>
+                Welcome to 1000 Spices — A Celebration of Culture, Taste, and Tradition! <br><br>
+                At 1000 Spices, we bring the diverse and flavorful world of Indian groceries to your fingertips.
+                Specializing in items from Kerala, Punjab, and Gujarat, our store is a vibrant mix of regional favorites, nostalgic aromas, and handpicked essentials.
+                <br><br>
+                Whether you’re craving the crisp bite of Kerala banana chips, the bold spices of Punjabi curries, or the sweet and tangy charm of Gujarati snacks,
+                1000 Spices is your local go-to for high-quality, authentic ingredients.
+                <br><br>
+                🛍️ What You'll Find Here:<br>
+                • Fresh vegetables and regional produce<br>
+                • A variety of dried fish and coastal specialties<br>
+                • Traditional snacks, spices, and pickles<br>
+                • Hand-selected products from Kerala, Punjab, and Gujarat<br><br>
+                Our mission is to help you bring the flavors of home into your kitchen — whether you're cooking for your family or just missing a taste of tradition.
+                <br><br>
+                
+                Thank you for exploring 1000 Spices — we can’t wait to serve you in person!
+            </h2>
+        </div>
+
+       
+    </div>
+</body>
+</html>

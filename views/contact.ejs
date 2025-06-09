@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fdf9;
+      background-image: url('/images/supermarket1.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity here: 0.4 = 40% dim */
+  z-index: 0;
+}
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+
+    h1 {
+      color: darkorange;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-section {
+      margin-top: 1.5rem;
+    }
+
+    .contact-section h2 {
+      font-size: 1.2rem;
+      color: #444;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: darkorange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: overline;
+    }
+
+    .social-link {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+    }
+
+     @media (max-width: 480px) {
+      .heading {
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+      }
+
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <%- include("partials/header") %>
+
+    <div class="contact-container">
+      <h1>📬 Contact Us</h1>
+      <p>
+        We’re here to serve you with the finest selection of groceries, spices, and specialty products. 
+        Have a question, need assistance, or want to place an order? Reach out to us — we’d love to hear from you!
+      </p>
+
+      <div class="contact-section">
+        <h2>📞 Phone</h2>
+        <p>Call us at <strong>613-827-6898</strong></p>
+      </div>
+
+      <div class="contact-section">
+        <h2>📦 Deliveries</h2>
+        <p>For deliveries, please <strong>WhatsApp</strong> us at <strong>613-827-6898</strong></p>
+      </div>
+
+      <div class="contact-section">
+        <h2>📱 Follow Us</h2>
+        <p class="social-link">Catch our latest updates, promotions, and product highlights on 
+          <a href="https://www.instagram.com/thousandspicesbelleville/?igsh=MWVpZGI3bTlsM2hsNw%3D%3D#" target="_blank">Instagram</a>.
+        </p>
+      </div>
+    </div>
+
+    <%- include("partials/footer") %>
+  </div>
+</body>
+</html>

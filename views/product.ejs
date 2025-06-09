@@ -1,0 +1,246 @@
+<%- include("partials/header") %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
+  <style>
+    /* [Same styles as you already have] */
+    body {
+      font-family: Arial, sans-serif;
+      
+       font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff0e1, #f3c282, #e07b39);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+       
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .product-section {
+      margin-bottom: 60px;
+    }
+
+    .product-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #338f56;
+      padding-bottom: 5px;
+      color: darkorange;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    
+
+    
+    @media (max-width: 1024px) {
+      .product-card {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        width: 90%;
+        margin: 10px auto;
+        padding: 12px;
+      }
+    }
+
+   
+    
+    svg {
+      margin: 15px;
+    }
+
+    .pro{
+      color: black;
+    }
+
+
+.category-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  background: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+.category-box {
+ width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 240, 225, 0.6),
+    rgba(243, 194, 130, 0.5),
+    rgba(224, 123, 57, 0.4)
+  );
+  border: 2px solid rgba(255, 140, 0, 0.3); /* light orange border */
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(14px);
+  color: #2e2e2e;
+}
+
+.category-box p {
+  font-family: 'Lora', serif; /* More elegant serif font */
+  font-size: 17px;
+  color: #2e2e2e;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.category-box h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #338f56;
+}
+
+.carousel-btn {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  font-size: 28px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  
+}
+
+.carousel-btn:hover {
+  background-color: #e6e6e6;
+}
+
+.carousel-btn.left {
+  margin-right: 20px;
+}
+
+.carousel-btn.right {
+  margin-left: 20px;
+}
+
+.category-box {
+  transition: all 0.4s ease;
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+}
+.category-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  border: 5px solid white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+</style>
+
+  </style>
+</head>
+<body>
+  
+
+  <h1 class="pro" >Our Products</h1>
+
+  <div class="category-carousel">
+  <button class="carousel-btn left" onclick="changeCategory(-1)">&#8249;</button>
+
+  <div class="category-box" id="categoryBox">
+     <img id="categoryImage" class="category-img" src="" alt="Category Image" />
+    <h2 id="categoryTitle">Kerala Products</h2>
+    <p id="categoryDesc">Matta rice, coconut oil, puttu podi, fish masala, jaggery, appam batter...</p>
+  </div>
+
+  <button class="carousel-btn right" onclick="changeCategory(1)">&#8250;</button>
+</div>
+
+
+  
+<script>
+ 
+const categories = [
+   {
+    title: 'Kerala Products',
+    desc: 'Experience the authentic taste of Kerala with essentials like Double Horse Matta Rice, Eastern Fish Curry Masala, KPL Shudhi Coconut Oil, Nirapara Puttu Podi, and Brahmins Appam Batter. These products bring the tropical, coconut-rich flavors and traditional spice blends of Kerala right into your kitchen.',
+     img: '/images/kerala.jpg'
+  },
+  {
+    title: 'Punjabi Products',
+    desc: 'Cook rich and flavorful Punjabi dishes with trusted products like MDH Chana Masala, Kohinoor Basmati Rice, Amul Paneer, Swad Desi Ghee, and Haldiram’s Ready-to-Eat Rajma Masala. From buttery curries to tandoori specialties, this range captures the bold spirit of Punjab.'
+    , img: '/images/kitchen.jpg' 
+  },
+  {
+    title: 'Gujarati Products',
+    desc: 'Bring home the balanced flavors of Gujarat with Gits Dhokla Mix, Deep Frozen Thepla, Haldiram’s Farsan, Dakor Gathiya, and Chheda’s Khakhra. These products help you prepare sweet, spicy, and tangy Gujarati dishes and snacks easily and deliciously.'
+   , img: '/images/gujarat.jpeg'
+  },
+  {
+    title: 'Nepali Products',
+    desc: 'Enjoy the rustic and earthy tastes of Nepal with Wai Wai Noodles, Ramailo Gundruk, Momo Magic Masala, Bhansa Ghar Timur, and Dalle Khursani Achar. These items offer the distinct spice and warmth of the Himalayan kitchen, from street food to homestyle meals.'
+   , img: '/images/nepal.jpeg'
+  },
+  {
+    title: 'Vegetables',
+    desc: 'Fresh and frozen vegetables are key to Indian and Nepali cooking. Choose from brands like Deep, Vadilal, and Daily Delight for items like okra, tindora, drumsticks, curry leaves, and suran. Whether it’s for a traditional sabzi or a fusion dish, these vegetables bring flavor and health to every plate.'
+   , img: '/images/vegetables.jpg'
+  },
+  {
+    title: 'Snacks',
+    desc: 'Snack time made better with top brands like Haldiram’s Aloo Bhujia, Balaji Banana Chips, Bikaji Bhujia, Lijjat Papad, and Chheda’s Chakli. From spicy to crunchy, sweet to salty, there’s something for every craving in this carefully selected snack collection.'
+   , img: '/images/snacks.jpeg'
+  },
+  {
+    title: 'Kitchen Items',
+    desc: 'Make cooking traditional meals easier with trusted brands like Prestige Pressure Cookers, Hawkins Idli Steamers, Butterfly Mixers, Pigeon Non-Stick Tawas, and Vinod Masala Dabba Sets. These tools are essentials in Indian and South Asian kitchens, built for performance and durability.'
+  , img: '/images/kitchen.jpg'
+  }
+  
+];
+
+let currentIndex = 0;
+
+function changeCategory(direction) {
+  currentIndex = (currentIndex + direction + categories.length) % categories.length;
+  document.getElementById("categoryTitle").innerText = categories[currentIndex].title;
+  document.getElementById("categoryDesc").innerText = categories[currentIndex].desc;
+  document.getElementById("categoryImage").src = categories[currentIndex].img;
+}
+
+window.onload = function() {
+  document.getElementById("categoryTitle").innerText = categories[0].title;
+  document.getElementById("categoryDesc").innerText = categories[0].desc;
+  document.getElementById("categoryImage").src = categories[0].img;
+}
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<%- include("partials/header") %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thousand Spices Grocery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f9f9f9;
+       background-image: url('/images/spices.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+     
+    }
+
+    .images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 30px;
+      width: fit-content;
+      margin: 25px auto;
+      background-color: rgba(255, 255, 255, 0.6); /* semi-transparent white */
+     padding: 10px;
+     border-radius: 80px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle shadow */
+     /* fit around image */
+      
+    }
+
+    .name{
+        height: 400px;
+        width: auto;
+        border-radius: 12px;
+    }
+
+    
+  
+  
+
+    .name {
+      height: 250px;
+      width: 250px;
+      border-radius: 12px;
+    }
+
+    .info {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .heading, .keralahead, .punjabhead, .gujarat, .veg, .fish, .snacks {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 26px;
+      color: #3c3c3c;
+    }
+
+    .keralahead { color: #57f18a; }
+    .punjabhead { color: #8e44ad; }
+    .gujarat { color: #e67e22; }
+    .veg { color: #27ae60; }
+    .fish { color: #2980b9; }
+    .snacks { color: #c0392b; }
+
+    .intro, .more {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .checkpoints {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+     @media (max-width: 480px) {
+      .heading {
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+      }
+
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+    }
+
+    
+
+
+
+    
+  </style>
+</head>
+<body>
+  
+    
+  <div class="images">
+    
+    <img class="name" src="/images/Thousand Spicec .png" alt="Thousand Spices Logo">
+    
+  </div>
+
+  <div class="info">
+    <div class="section">
+      <h1 class="heading">Welcome to Thousand Spices Grocery Store — Your Gateway to Authentic Indian Flavours!</h1>
+      <p class="intro">
+        At 1000 Spices Grocery Store, we bring together the rich culinary heritage of Kerala, Punjab, and Gujarat under one vibrant roof, making it easier than ever to fill your kitchen with authentic ingredients and beloved tastes from back home.
+        Whether you're craving the deep, coconut-infused aroma of a Kerala fish curry, the bold spices of Punjabi chole, or the tangy sweetness of a Gujarati khatti-meethi dal — we’ve got you covered.
+      </p>
+      <p class="more">We specialize in offering a curated selection of region-specific products that cater to the diverse Indian community and anyone who loves exploring Indian cuisine.</p>
+    </div>
+
+    <div class="section">
+      <h1 class="keralahead">🌴 Kerala Delights</h1>
+      <p class="more">Step into a world of earthy flavors and tropical aromas with our selection of Kerala essentials. We stock everything from Matta rice, puttu podi, and appam batter to nendran banana chips, jaggery snacks, and unakka meen (dried fish). Fresh vegetables like drumstick, ash gourd, and snake gourd, along with traditional snacks like achappam and kuzhalappam, bring the nostalgic taste of home to your table.</p>
+    </div>
+
+    <div class="section">
+      <h1 class="punjabhead">🔴 Punjabi Essentials</h1>
+      <p class="more">If bold and hearty is your style, our Punjabi collection is sure to satisfy. Discover staples like sarson ka saag, makki di roti flour, paneer, rajma, and desi ghee. For snack lovers, our selection includes amritsari kulchas, Punjabi pickles, and tandoori masalas that add a punch of flavor to every meal.</p>
+    </div>
+
+    <div class="section">
+      <h1 class="gujarat">🟠 Gujarati Favourites</h1>
+      <p class="more">Sweet, spicy, and packed with comfort — our Gujarati section features popular items like thepla, fafda, khakhra, gathiya, and chhundo. From flour mixes for dhokla and handvo to crunchy snacks like moong dal and sev, you’ll find everything you need to recreate your favorite dishes with ease.</p>
+    </div>
+
+    <div class="section">
+      <h1 class="veg">🥬 Fresh Vegetables & Herbs</h1>
+      <p class="more">We believe freshness is the heart of good cooking. That’s why we offer a rotating stock of handpicked Indian vegetables like taro root, ivy gourd, bitter gourd, raw banana, curry leaves, and okra — perfect for traditional curries and stir-fries.</p>
+    </div>
+
+    <div class="section">
+      <h1 class="fish">🐟 Dried Fish & Seafood Specialties</h1>
+      <p class="more">For seafood lovers, our high-quality dried fish collection is a treat. Choose from dried anchovies (natholi), mackerel (ayala), prawns (chemmeen), and more — perfect for making spicy Kerala-style seafood dishes at home.</p>
+    </div>
+
+    <div class="section">
+      <h1 class="snacks">🍘 Traditional Snacks & Sweets</h1>
+      <p class="more">Whether it's teatime or festival season, our snacks section brings you irresistible bites like banana chips, neyyappam, pazham pori, Kerala mixture, and more. From sweet to savory, we have something for everyone.</p>
+    </div>
+
+    <div class="section">
+      <h1>🌍 Why Shop With Us?</h1>
+      <ul class="checkpoints">
+        <li>✅ Curated products from across Indian states</li>
+        <li>✅ High-quality and authentic ingredients</li>
+        <li>✅ Friendly, multilingual service</li>
+        <li>✅ Affordable prices with new stock added weekly</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+<%- include("partials/footer") %>
